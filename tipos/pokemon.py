@@ -3,10 +3,10 @@ import csv
 
 
 class pokemon():
-    nombre = csv.reader(open("pokemon.csv", "r"))
+    nombre = csv.reader(open("coach_1_pokemons.csv", "r"))
     for row in nombre:
         print(row)
-        
+
     def __init__(self, id, nombre, arma, salud, ataque, defensa):
         self.id = id
         self.nombre = nombre
@@ -47,4 +47,12 @@ def is_alive(self):
         return False
     else:
         return True
+
+with open('coach_1_pokemos.csv', 'w', newline='') as csvfile:
+    fieldnames = ['', 'last_name']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+    writer.writeheader()
+    writer.writerow({'id': 'id', 'nombre': 'nombre', 'arma': 'arma', 'salud': 'salud', 'ataque': 'Ataque', 'defensa': 'Defensa'})
+
 
