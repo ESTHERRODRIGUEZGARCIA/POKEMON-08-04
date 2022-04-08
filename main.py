@@ -3,6 +3,7 @@
 from tipos import *
 from tipos import pokemon
 from tipos import ejer2
+import csv
 
 def elegir():
     print("\nExamen EDA I 8 de Abril 2022\nEsther Rodríguez García:  ")
@@ -12,7 +13,7 @@ def elegir():
     elif variable == 2:
         from tipos import ejer2
     elif variable == 3:
-        from tipos import main
+        import main
     else:
         print("Sólo son válidos los valores 1,2 y 3.\n")
         elegir()
@@ -26,19 +27,12 @@ if __name__ == "__main__":
     main()
 
 
-
-
-
-import csv
-
-
-
 with open('coach_1_pokemos.csv', 'w', newline='') as csvfile:
     fieldnames = ['', '', '', '', '', '']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
-    writer.writerow({'id': 'id', 'nombre': 'nombre', 'arma': 'arma', 'salud': 'salud', 'ataque': 'Ataque', 'defensa': 'Defensa'})
+    writer.writerow({'id': '', 'nombre': '', 'arma': '', 'salud': '', 'ataque': '', 'defensa': ''})
 
 
 with open('coach_2_pokemos.csv', 'w', newline='') as csvfile:
@@ -46,6 +40,6 @@ with open('coach_2_pokemos.csv', 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
-    writer.writerow({'id': 'id', 'nombre': 'nombre', 'arma': 'arma', 'salud': 'salud', 'ataque': 'Ataque', 'defensa': 'Defensa'})
+    writer.writerow({'id': '', 'nombre': '', 'arma': '', 'salud': '', 'ataque': '', 'defensa': ''})
 
 
