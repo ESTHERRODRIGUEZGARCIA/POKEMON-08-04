@@ -1,4 +1,5 @@
 class pokemon():
+    nombre = input("Introduce el nombre del pokemon:\n")
     def __init__(self, id, nombre, arma, salud, ataque, defensa):
         self.id = id
         self.nombre = nombre
