@@ -48,11 +48,3 @@ def is_alive(self):
     else:
         return True
 
-with open('coach_1_pokemos.csv', 'w', newline='') as csvfile:
-    fieldnames = ['', 'last_name']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-    writer.writeheader()
-    writer.writerow({'id': 'id', 'nombre': 'nombre', 'arma': 'arma', 'salud': 'salud', 'ataque': 'Ataque', 'defensa': 'Defensa'})
-
-
