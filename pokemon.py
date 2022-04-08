@@ -35,3 +35,9 @@ class pokemon():
 
     def __del__(self):
         print("{} ha sido eliminado".format(self.nombre))
+
+def is_alive(self):
+    if self.salud <= 0:
+        return False
+    else:
+        return True
