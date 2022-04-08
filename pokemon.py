@@ -7,8 +7,6 @@ class pokemon():
         self.ataque = ataque
         self.defensa = defensa
 
-
-
     def __str__(self):
         return "Pokemon: {}\nArma: {}\nSalud: {}\nAtaque: {}\nDefensa: {}".format(self.nombre, self.arma, self.salud, self.ataque, self.defensa)
 
