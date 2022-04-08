@@ -7,6 +7,8 @@ class pokemon():
         self.ataque = ataque
         self.defensa = defensa
 
+
+
     def __str__(self):
         return "Pokemon: {}\nArma: {}\nSalud: {}\nAtaque: {}\nDefensa: {}".format(self.nombre, self.arma, self.salud, self.ataque, self.defensa)
 
@@ -19,4 +21,15 @@ class pokemon():
             return True
         else:
             return False
-            
+
+    def defender(self, pokemon):
+        self.salud -= pokemon.ataque - self.defensa
+        print("{} atacó a {}".format(pokemon.nombre, self.nombre))
+        print("{} tiene {} de salud".format(self.nombre, self.salud))
+        if self.salud <= 0:
+            print("{} ha muerto".format(self.nombre))
+            return True
+        else:
+            return False
+
+    
