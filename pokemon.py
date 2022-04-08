@@ -15,9 +15,9 @@ class pokemon():
     def atacar(self, pokemon):
         pokemon.salud -= self.ataque - pokemon.defensa
         print("{} atacó a {}".format(self.nombre, pokemon.nombre))
-        print("{} tiene {} de salud".format(pokemon.nombre, pokemon.salud))
+        print("{} tiene {} de salud. ".format(pokemon.nombre, pokemon.salud))
         if pokemon.salud <= 0:
-            print("{} ha muerto".format(pokemon.nombre))
+            print("{} ha muerto. ".format(pokemon.nombre))
             return True
         else:
             return False
@@ -25,16 +25,16 @@ class pokemon():
     def defender(self, pokemon):
         self.salud -= pokemon.ataque - self.defensa
         print("{} atacó a {}".format(pokemon.nombre, self.nombre))
-        print("{} tiene {} de salud".format(self.nombre, self.salud))
+        print("{} tiene {} de salud. ".format(self.nombre, self.salud))
         if self.salud <= 0:
-            print("{} ha muerto".format(self.nombre))
+            print("{} ha muerto. ".format(self.nombre))
             return True
         else:
             return False
 
 
     def __del__(self):
-        print("{} ha sido eliminado".format(self.nombre))
+        print("{} ha sido eliminado. ".format(self.nombre))
 
 def is_alive(self):
     if self.salud <= 0:
@@ -48,4 +48,17 @@ def fight_attack(self, pokemon_to_attack):
         pokemon_to_attack.defender(self)
         self.ataque = self.ataque - self.arma
     else:
-        print("{} o {} ya no están vivos".format(self.nombre, pokemon_to_attack.nombre))
+        print("{} o {} ya no están vivos. ".format(self.nombre, pokemon_to_attack.nombre))
+
+def fight_defense(self, points_of_damage):
+    if is_alive(self):
+        self.salud = self.salud - points_of_damage
+        print("{} ha recibido {} de daño. ".format(self.nombre, points_of_damage))
+        if self.salud <= 0:
+            print("{} ha muerto. ".format(self.nombre))
+            return False
+        else:
+            return True
+    else:
+        print("{} ya no está vivo".format(self.nombre))
+        return False
