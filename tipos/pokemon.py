@@ -1,5 +1,12 @@
+
+import csv
+
+
 class pokemon():
-    nombre = input("Introduce el nombre del pokemon:\n")
+    nombre = csv.reader(open("pokemon.csv", "r"))
+    for row in nombre:
+        print(row)
+        
     def __init__(self, id, nombre, arma, salud, ataque, defensa):
         self.id = id
         self.nombre = nombre
