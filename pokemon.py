@@ -40,23 +40,3 @@ def is_alive(self):
     else:
         return True
 
-def fight_attack(self, pokemon_to_attack):
-    if is_alive(self) and is_alive(pokemon_to_attack):
-        self.ataque = self.ataque + self.arma
-        pokemon_to_attack.defender(self)
-        self.ataque = self.ataque - self.arma
-    else:
-        print("{} o {} ya no están vivos. ".format(self.nombre, pokemon_to_attack.nombre))
-
-def fight_defense(self, points_of_damage):
-    if is_alive(self):
-        self.salud = self.salud - points_of_damage
-        print("{} ha recibido {} de daño. ".format(self.nombre, points_of_damage))
-        if self.salud <= 0:
-            print("{} ha muerto. ".format(self.nombre))
-            return False
-        else:
-            return True
-    else:
-        print("{} ya no está vivo".format(self.nombre))
-        return False
