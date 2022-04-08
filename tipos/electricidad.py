@@ -1,5 +1,5 @@
 #Pokémon de Electricidad: Este Pokemon tiene el método ataque modificado de tal forma que existe un 50% de posibilidad de que su ataque valga el doble de lo originalmente expuesto. Este 50% se puede calcular utilizando el módulo random
-# import random
+
 
 import random
 class electricidad():
