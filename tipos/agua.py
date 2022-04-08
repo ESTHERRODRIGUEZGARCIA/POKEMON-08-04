@@ -1,5 +1,5 @@
 #Pokémon de Agua: Este Pokemon va a tener un índice de ataque que va a estar entre 11 y 20.
-from random import randint
+import random
 
 class agua():
     def ataque(self):
