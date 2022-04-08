@@ -32,4 +32,6 @@ class pokemon():
         else:
             return False
 
-    
+
+    def __del__(self):
+        print("{} ha sido eliminado".format(self.nombre))
