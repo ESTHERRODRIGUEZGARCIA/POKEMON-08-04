@@ -19,12 +19,6 @@ def elegir():
         elegir()
 elegir()
 
-def main():
-
-    elegir()
-
-if __name__ == "__main__":
-    main()
 
 
 with open('coach_1_pokemos.csv', 'w', newline='') as csvfile:
@@ -41,5 +35,13 @@ with open('coach_2_pokemos.csv', 'w', newline='') as csvfile:
 
     writer.writeheader()
     writer.writerow({'id': '', 'nombre': '', 'arma': '', 'salud': '', 'ataque': '', 'defensa': ''})
+
+
+def main():
+
+    elegir()
+
+if __name__ == "__main__":
+    main()
 
 
