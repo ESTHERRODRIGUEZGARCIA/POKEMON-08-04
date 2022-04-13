@@ -1,16 +1,18 @@
 
 import csv
 
+from tipos.tipodearma import tipo_arma
+
 
 class pokemon():
     nombre = csv.reader(open("coach_1_pokemons.csv", "r"))
     for row in nombre:
         print(row)
 
-    def __init__(self, id, nombre, arma, salud, ataque, defensa):
+    def __init__(self, id, nombre, tipo_arma, salud, ataque, defensa):
         self.id = id
         self.nombre = nombre
-        self.arma = arma #Puñetazo, Patada, Codazo, Cabezazo
+        self.arma = tipo_arma #Puñetazo, Patada, Codazo, Cabezazo
         self.salud = salud #entre 1 y 100
         self.ataque = ataque #entre 1 y 10
         self.defensa = defensa #entre 1 y 10
@@ -43,9 +45,10 @@ class pokemon():
     def __del__(self):
         print("{} ha sido eliminado. ".format(self.nombre))
 
-def is_alive(self):
-    if self.salud <= 0:
-        return False
-    else:
-        return True
+    def is_alive(self):
+        if self.salud <= 0:
+            return False
+        else:
+            return True
 
+    
