@@ -26,13 +26,6 @@ with open('coach_1_pokemos.csv', 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader() #escribe el nombre de las columnas
-    #Puñetazo, Patada, Codazo, Cabezazo
-    writer.writerow({'id': '2', 'nombre': 'Charmeleon', 'tipo_arma': 'Puñetazo', 'salud': '100', 'ataque': '10', 'defensa': '10'})
-    writer.writerow({'id': '13', 'nombre': 'Squirtle', 'tipo_arma': '', 'salud': '100', 'ataque': '10', 'defensa': '10'})
-    writer.writerow({'id': '11', 'nombre': 'Pikachu', 'tipo_arma': 'Headbutt', 'salud': '69', 'ataque': '8', 'defensa': '8'})
-    writer.writerow({'id': '5', 'nombre': 'Venusaur', 'tipo_arma': 'Puñetazo', 'salud': '100', 'ataque': '10', 'defensa': '10'})
-    writer.writerow({'id': '6', 'nombre': 'Diglett', 'tipo_arma': 'Puñetazo', 'salud': '100', 'ataque': '10', 'defensa': '10'})
-    writer.writerow({'id': '7', 'nombre': 'Pidgey', 'tipo_arma': 'Puñetazo', 'salud': '100', 'ataque': '10', 'defensa': '10'})
 
 
 with open('coach_2_pokemos.csv', 'w', newline='') as csvfile:
