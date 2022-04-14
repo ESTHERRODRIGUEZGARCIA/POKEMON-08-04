@@ -33,7 +33,6 @@ with open('coach_2_pokemos.csv', 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
-    writer.writerow({'id': '', 'nombre': '', 'arma': '', 'salud': '', 'ataque': '', 'defensa': ''})
 
 
 def main():
