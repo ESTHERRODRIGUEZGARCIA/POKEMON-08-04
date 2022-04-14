@@ -51,4 +51,5 @@ class pokemon():
         else:
             return True
 
-    
+
+
